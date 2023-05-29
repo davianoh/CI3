@@ -18,6 +18,7 @@
 			<td>kode</td>
 			<td>Origin</td>
 			<td>Destinasi</td>
+			<td>Harga</td>
 			<td>Kapasitas</td>
 			<td>Seat</td>
 		</tr>
@@ -30,6 +31,7 @@
 			<td><?php echo $row->kode ?></td>
 			<td><?php echo $row->origin ?></td>
 			<td><?php echo $row->destinasi ?></td>
+			<td><?php echo $row->harga ?></td>
 			<td><?php echo $row->kapasitas ?></td>
 			<td><?php echo $row->seats ?></td>
 			<!-- <td><a href="<?php echo base_url('/home/halaman_edit') ?>/<?php echo $row->kode ?>">Edit</a> | <a href="<?php echo base_url('/home/fungsiDelete') ?>/<?php echo $row->kode ?>">Delete</a></td> -->

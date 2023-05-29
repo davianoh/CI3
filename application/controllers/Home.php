@@ -118,9 +118,17 @@ class Home extends CI_Controller {
 
 		$user = 'Davian';
 		$queryUserDetail = $this->M_Mahasiswa->getDataUserDetail($user);
-		$queryAllReservasi = $this->M_Mahasiswa->getDataReservasi();
 
-		$DATA = array('queryAllRsv' => $queryAllReservasi, 'queryUsr' => $queryUserDetail);
+		$ArrUpdate2 = array(
+			'user' => $queryUserDetail->user,
+			'password' => $queryUserDetail->password,
+			'balance' => $queryUserDetail->balance - $queryReservasiDetail->harga * $seats
+		);
+		$this->M_Mahasiswa->updateDataUser($user, $ArrUpdate2);
+
+		$queryAllReservasi = $this->M_Mahasiswa->getDataReservasi();
+		$queryUserDetail2 = $this->M_Mahasiswa->getDataUserDetail($user);
+		$DATA = array('queryAllRsv' => $queryAllReservasi, 'queryUsr' => $queryUserDetail2);
 		$this->load->view('home', $DATA);
 
 	}

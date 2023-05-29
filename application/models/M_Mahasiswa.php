@@ -62,6 +62,11 @@ class M_Mahasiswa extends CI_Model {
 		return $query->row();
 	}
 
+	function updateDataUser($user, $data) {
+		$this->db->where('user', $user);
+		$this->db->update('tb_users', $data);
+	}
+
 }
 
 /* End of file M_Mahasiswa.php */
