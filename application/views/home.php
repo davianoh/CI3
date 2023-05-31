@@ -16,6 +16,7 @@
 	<table border="1">
 		<tr>
 			<td>kode</td>
+			<td>jadwal</td>
 			<td>Origin</td>
 			<td>Destinasi</td>
 			<td>Harga</td>
@@ -29,6 +30,7 @@
 		 ?>
 		<tr>
 			<td><?php echo $row->kode ?></td>
+			<td><?php echo $row->jadwal ?></td>
 			<td><?php echo $row->origin ?></td>
 			<td><?php echo $row->destinasi ?></td>
 			<td><?php echo $row->harga ?></td>
